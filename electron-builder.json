@@ -1,7 +1,7 @@
 {
   "appId": "com.target.storemanager",
   "productName": "Store Manager",
-  "files": ["dist/electron", "dist/app"],
+  "files": ["dist/electron/**/*", "dist/app/**/*"],
   "mac": {
     "target": "dmg"
   },
