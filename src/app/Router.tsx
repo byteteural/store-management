@@ -2,6 +2,7 @@ import { createHashRouter } from "react-router";
 import App from "./App";
 import Store from "./Store";
 import Stock from "./Stock";
+import Income from "./Income";
 import NotFound from "./views/NotFound";
 
 export const router = createHashRouter([
@@ -20,5 +21,9 @@ export const router = createHashRouter([
   {
     path: "/stock",
     element: <Stock />,
+  },
+  {
+    path: "/income",
+    element: <Income />,
   },
 ]);
