@@ -1,5 +1,8 @@
 import { Link } from "react-router";
 export default function App() {
+  // window.electron.ping().then((res) => {
+  //   console.log("ping", res);
+  // });
   return (
     <div className="flex items-center justify-center min-h-screen bg-base-200">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 bg-base-100 rounded-box">

@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
 import { isDev } from "./utils.js";
 
@@ -10,6 +10,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
+      preload: path.join(__dirname, "preload.ts"),
     },
   });
 
@@ -21,6 +22,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  ipcMain.handle("ping", () => "pong");
   createWindow();
 
   app.on("activate", () => {
