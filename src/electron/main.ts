@@ -2,15 +2,18 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
 import { isDev } from "./utils.js";
 import db from "../database/db.js";
+import { getPreloadPath } from "./pathResolver.js";
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1600,
     height: 900,
     resizable: false,
     webPreferences: {
-      nodeIntegration: true,
+      preload: getPreloadPath(),
+      nodeIntegration: false,
+      sandbox: true,
       contextIsolation: true,
-      preload: path.join(__dirname, "preload.ts"),
     },
   });
 

@@ -1,5 +1,5 @@
 {
-  "name": "store-manager",
+  "name": "electronjs-react-template",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -7,39 +7,37 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:r dev:e",
     "dev:r": "vite",
-    "dev:e": "npm run transpile:e; cross-env NODE_ENV=development electron .",
+    "dev:e": "npm run transpile; cross-env NODE_ENV=development electron .",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "transpile:e": "tsc -p src/electron/tsconfig.json",
-    "b:mac": "npm run transpile:e && npm run build && electron-builder --mac --arm64",
-    "b:linux": "npm run transpile:e && npm run build && electron-builder --linux --x64",
-    "b:win": "npm run transpile:e && npm run build && electron-builder --win --x64"
+    "transpile": "tsc -p src/electron/tsconfig.json",
+    "build:mac": "npm run transpile && npm run build && electron-builder --mac --arm64",
+    "build:linux": "npm run transpile && npm run build && electron-builder --linux --x64",
+    "build:win": "npm run transpile && npm run build && electron-builder --win --x64"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.5",
-    "@types/bun": "^1.2.13",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.6.0",
-    "tailwindcss": "^4.1.5"
+    "@tailwindcss/vite": "^4.1.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.0",
+    "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react-swc": "^3.8.0",
+    "@eslint/js": "^9.27.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react-swc": "^3.9.0",
     "cross-env": "^7.0.3",
-    "daisyui": "^5.0.35",
-    "electron": "^36.1.0",
+    "electron": "^36.2.1",
     "electron-builder": "^26.0.12",
-    "eslint": "^9.22.0",
+    "eslint": "^9.27.0",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.1.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
   }
 }
