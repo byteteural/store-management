@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
 import { isDev } from "./utils.js";
-import db from "../database/db.js";
+import { db } from "../database/db.js";
 import { getPreloadPath } from "./pathResolver.js";
 
 function createWindow() {

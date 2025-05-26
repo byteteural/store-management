@@ -23,6 +23,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 bun.lock
+yarn.lock
+package-lock.json
 
 node_modules
 dist
@@ -38,3 +40,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#database
+app.db
